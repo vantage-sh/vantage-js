@@ -1,0 +1,45 @@
+{
+  "name": "@vantage-sh/vantage-client",
+  "version": "0.0.1-beta5",
+  "description": "Vantage API Client",
+  "license": "MIT",
+  "main": "dist/Vantage/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "build": "babel ./src --out-dir lib",
+    "prepublish": "npm run build"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "querystring": "0.2.0",
+    "superagent": "3.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "expect.js": "~0.3.1",
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vantage-sh/vantage-js.git"
+  },
+  "keywords": [
+    "api",
+    "client"
+  ],
+  "author": "Brooke McKim <brooke@vantage.sh>",
+  "bugs": {
+    "url": "https://github.com/vantage-sh/vantage-js/issues"
+  },
+  "homepage": "https://github.com/vantage-sh/vantage-js#readme"
+}
