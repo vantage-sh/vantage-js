@@ -1,6 +1,6 @@
 {
   "name": "@vantage-sh/vantage-client",
-  "version": "0.0.1-beta5",
+  "version": "0.0.1-beta6",
   "description": "Vantage API Client",
   "license": "MIT",
   "main": "dist/Vantage/index.js",
