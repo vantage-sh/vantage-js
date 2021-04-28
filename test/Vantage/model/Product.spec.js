@@ -71,6 +71,12 @@
         // expect(instance.providerId).to.be(expectedValueLiteral);
       });
 
+      it('should have the property details (base name: "details")', function() {
+        // TODO: update the code to test the property details
+        expect(instance).to.have.property('details');
+        // expect(instance.details).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

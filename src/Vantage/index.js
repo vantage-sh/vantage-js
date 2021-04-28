@@ -14,17 +14,17 @@
  *
  */
 
-import {ApiClient} from './ApiClient.js';
-import {Price} from './model/Price.js';
-import {Prices} from './model/Prices.js';
-import {Product} from './model/Product.js';
-import {Products} from './model/Products.js';
-import {Provider} from './model/Provider.js';
-import {Providers} from './model/Providers.js';
-import {Service} from './model/Service.js';
-import {Services} from './model/Services.js';
-import {PingApi} from './Vantage/PingApi.js';
-import {PricesApi} from './Vantage/PricesApi.js';
+import {ApiClient} from './ApiClient';
+import {Price} from './model/Price';
+import {Prices} from './model/Prices';
+import {Product} from './model/Product';
+import {Products} from './model/Products';
+import {Provider} from './model/Provider';
+import {Providers} from './model/Providers';
+import {Service} from './model/Service';
+import {Services} from './model/Services';
+import {PingApi} from './Vantage/PingApi';
+import {PricesApi} from './Vantage/PricesApi';
 
 
 /**

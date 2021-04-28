@@ -51,6 +51,8 @@ export class Product {
         obj.serviceId = ApiClient.convertToType(data['service_id'], 'String');
       if (data.hasOwnProperty('provider_id'))
         obj.providerId = ApiClient.convertToType(data['provider_id'], 'String');
+      if (data.hasOwnProperty('details'))
+        obj.details = ApiClient.convertToType(data['details'], Object);
     }
     return obj;
   }
@@ -84,5 +86,11 @@ Product.prototype.serviceId = undefined;
  * @member {String} providerId
  */
 Product.prototype.providerId = undefined;
+
+/**
+ * An object of metadata about the product.
+ * @member {Object} details
+ */
+Product.prototype.details = undefined;
 
 

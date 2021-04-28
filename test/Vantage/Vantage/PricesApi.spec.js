@@ -133,6 +133,8 @@
             // expect(data.serviceId).to.be("aws-ec2");
             expect(data.providerId).to.be.a('string');
             // expect(data.providerId).to.be("aws");
+            expect(data.details).to.be.a(Object);
+            // expect(data.details).to.be({"gpu":0,"name":"M5 General Purpose 16xlarge","vcpu":64,"memory":256,"clock_speed_ghz":3.1,"physical_processor_description":"Intel Xeon Platinum 8175 (Skylake)","network_performance_description":"20 Gigabit"});
 
             done();
           }, function(error) {
@@ -174,6 +176,8 @@
                 // expect(data.serviceId).to.be("aws-ec2");
                 expect(data.providerId).to.be.a('string');
                 // expect(data.providerId).to.be("aws");
+                expect(data.details).to.be.a(Object);
+                // expect(data.details).to.be({"gpu":0,"name":"M5 General Purpose 16xlarge","vcpu":64,"memory":256,"clock_speed_ghz":3.1,"physical_processor_description":"Intel Xeon Platinum 8175 (Skylake)","network_performance_description":"20 Gigabit"});
               }
             }
 

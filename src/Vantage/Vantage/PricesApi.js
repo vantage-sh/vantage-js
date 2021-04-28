@@ -45,7 +45,7 @@ export class PricesApi {
     /**
      * Returns a price
      * @param {String} productId 
-     * @param {String} id Unique identifier of the price e.g. aws-ec2-m5d_16xlarge-eu_central_1-on_demand-linux_enterprise
+     * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Vantage/model/Price} and HTTP response
      */
     getPriceWithHttpInfo(productId, id) {
@@ -88,7 +88,7 @@ export class PricesApi {
     /**
      * Returns a price
      * @param {String} productId 
-     * @param {String} id Unique identifier of the price e.g. aws-ec2-m5d_16xlarge-eu_central_1-on_demand-linux_enterprise
+     * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Vantage/model/Price}
      */
     getPrice(productId, id) {
@@ -101,7 +101,7 @@ export class PricesApi {
 
     /**
      * Return available Prices across all Regions for a Product.
-     * @param {String} productId The Product ID that you wish to query prices for.
+     * @param {String} productId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Vantage/model/Prices} and HTTP response
      */
     getPricesWithHttpInfo(productId) {
@@ -137,7 +137,7 @@ export class PricesApi {
 
     /**
      * Return available Prices across all Regions for a Product.
-     * @param {String} productId The Product ID that you wish to query prices for.
+     * @param {String} productId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Vantage/model/Prices}
      */
     getPrices(productId) {
@@ -150,7 +150,7 @@ export class PricesApi {
 
     /**
      * Return a product
-     * @param {String} id Unique identifier of the product e.g. aws-ec2-m5d_16xlarge
+     * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Vantage/model/Product} and HTTP response
      */
     getProductWithHttpInfo(id) {
@@ -186,7 +186,7 @@ export class PricesApi {
 
     /**
      * Return a product
-     * @param {String} id Unique identifier of the product e.g. aws-ec2-m5d_16xlarge
+     * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Vantage/model/Product}
      */
     getProduct(id) {
