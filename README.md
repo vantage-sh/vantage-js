@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/vantage-sh/vantage-js.svg?branch=main)](https://www.travis-ci.com/vantage-sh/vantage-js)
+
 # vantage
 
 Vantage - JavaScript client for vantage
