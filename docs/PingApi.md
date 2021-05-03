@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="ping"></a>
 # **ping**
-> ping()
+> Object ping()
 
 
 
@@ -17,7 +17,7 @@ This is a health check endpoint that can be used to determine Vantage API health
 
 ### Example
 ```javascript
-import {Vantage} from '@vantage-sh/vantage-client';
+import {Vantage} from 'vantage';
 let defaultClient = Vantage.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: oauth2
@@ -25,8 +25,8 @@ let oauth2 = defaultClient.authentications['oauth2'];
 oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Vantage.PingApi();
-apiInstance.ping().then(() => {
-  console.log('API called successfully.');
+apiInstance.ping().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -38,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 

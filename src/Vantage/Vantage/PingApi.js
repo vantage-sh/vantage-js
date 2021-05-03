@@ -38,7 +38,7 @@ export class PingApi {
 
     /**
      * This is a health check endpoint that can be used to determine Vantage API healthiness. It will return a 200 success with the raw text of \"pong\" if everything is running smoothly.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     pingWithHttpInfo() {
       let postBody = null;
@@ -56,7 +56,7 @@ export class PingApi {
       let authNames = ['oauth2'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = Object;
 
       return this.apiClient.callApi(
         '/v1/ping', 'GET',
@@ -67,7 +67,7 @@ export class PingApi {
 
     /**
      * This is a health check endpoint that can be used to determine Vantage API healthiness. It will return a 200 success with the raw text of \"pong\" if everything is running smoothly.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     ping() {
       return this.pingWithHttpInfo()

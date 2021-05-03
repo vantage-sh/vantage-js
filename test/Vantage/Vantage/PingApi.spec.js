@@ -38,10 +38,13 @@
     describe('PingApi', function() {
       describe('ping', function() {
         it('should call ping successfully', function(done) {
-          // TODO: uncomment ping call
+          // TODO: uncomment ping call and complete the assertions
           /*
 
           instance.ping().then(function(data) {
+            // TODO: update response assertions
+            expect(data).to.be.a(Object);
+            // expect(data).to.be(null);
 
             done();
           }, function(error) {
