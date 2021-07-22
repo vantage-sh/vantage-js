@@ -22,7 +22,7 @@ Returns a price
 
 ### Example
 ```javascript
-import {Vantage} from '@vantage-sh/vantage-client';
+import {Vantage} from 'vantage';
 let defaultClient = Vantage.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: oauth2
@@ -33,7 +33,7 @@ let apiInstance = new Vantage.PricesApi();
 
 let productId = "productId_example"; // String | 
 
-let id = "id_example"; // String | Unique identifier of the price e.g. aws-ec2-m5d_16xlarge-eu_central_1-on_demand-linux_enterprise
+let id = "id_example"; // String | 
 
 apiInstance.getPrice(productId, id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -48,7 +48,7 @@ apiInstance.getPrice(productId, id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **productId** | **String**|  | 
- **id** | **String**| Unique identifier of the price e.g. aws-ec2-m5d_16xlarge-eu_central_1-on_demand-linux_enterprise | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="getPrices"></a>
 # **getPrices**
-> Prices getPrices(productId)
+> Prices getPrices(productId, opts)
 
 
 
@@ -73,7 +73,7 @@ Return available Prices across all Regions for a Product.
 
 ### Example
 ```javascript
-import {Vantage} from '@vantage-sh/vantage-client';
+import {Vantage} from 'vantage';
 let defaultClient = Vantage.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: oauth2
@@ -82,9 +82,13 @@ oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Vantage.PricesApi();
 
-let productId = "productId_example"; // String | The Product ID that you wish to query prices for.
+let productId = "productId_example"; // String | 
 
-apiInstance.getPrices(productId).then((data) => {
+let opts = { 
+  'page': 2, // Number | The page of results to return.
+  'limit': 500 // Number | The amount of results to return. The maximum is 1000
+};
+apiInstance.getPrices(productId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -96,7 +100,9 @@ apiInstance.getPrices(productId).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productId** | **String**| The Product ID that you wish to query prices for. | 
+ **productId** | **String**|  | 
+ **page** | **Number**| The page of results to return. | [optional] 
+ **limit** | **Number**| The amount of results to return. The maximum is 1000 | [optional] 
 
 ### Return type
 
@@ -121,7 +127,7 @@ Return a product
 
 ### Example
 ```javascript
-import {Vantage} from '@vantage-sh/vantage-client';
+import {Vantage} from 'vantage';
 let defaultClient = Vantage.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: oauth2
@@ -130,7 +136,7 @@ oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Vantage.PricesApi();
 
-let id = "id_example"; // String | Unique identifier of the product e.g. aws-ec2-m5d_16xlarge
+let id = "id_example"; // String | 
 
 apiInstance.getProduct(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -144,7 +150,7 @@ apiInstance.getProduct(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Unique identifier of the product e.g. aws-ec2-m5d_16xlarge | 
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -169,7 +175,7 @@ Return available Products for a Service. For example, with a Provider of AWS and
 
 ### Example
 ```javascript
-import {Vantage} from '@vantage-sh/vantage-client';
+import {Vantage} from 'vantage';
 let defaultClient = Vantage.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: oauth2
@@ -181,7 +187,9 @@ let apiInstance = new Vantage.PricesApi();
 let opts = { 
   'providerId': "providerId_example", // String | Query by Provider to list all Products across all Services for a Provider. e.g. aws
   'serviceId': "serviceId_example", // String | Query by Service to list all Products for a specific provider service. e.g. aws-ec2
-  'name': "name_example" // String | Query by name of the Product to see a list of products which match that name. e.g. m5a.16xlarge
+  'name': "name_example", // String | Query by name of the Product to see a list of products which match that name. e.g. m5a.16xlarge
+  'page': 2, // Number | The page of results to return.
+  'limit': 500 // Number | The amount of results to return. The maximum is 1000
 };
 apiInstance.getProducts(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -198,6 +206,8 @@ Name | Type | Description  | Notes
  **providerId** | **String**| Query by Provider to list all Products across all Services for a Provider. e.g. aws | [optional] 
  **serviceId** | **String**| Query by Service to list all Products for a specific provider service. e.g. aws-ec2 | [optional] 
  **name** | **String**| Query by name of the Product to see a list of products which match that name. e.g. m5a.16xlarge | [optional] 
+ **page** | **Number**| The page of results to return. | [optional] 
+ **limit** | **Number**| The amount of results to return. The maximum is 1000 | [optional] 
 
 ### Return type
 
@@ -214,7 +224,7 @@ Name | Type | Description  | Notes
 
 <a name="getProviders"></a>
 # **getProviders**
-> Providers getProviders()
+> Providers getProviders(opts)
 
 
 
@@ -222,7 +232,7 @@ Providers are cloud infrastructure and service providers from which all cloud pr
 
 ### Example
 ```javascript
-import {Vantage} from '@vantage-sh/vantage-client';
+import {Vantage} from 'vantage';
 let defaultClient = Vantage.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: oauth2
@@ -230,7 +240,12 @@ let oauth2 = defaultClient.authentications['oauth2'];
 oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Vantage.PricesApi();
-apiInstance.getProviders().then((data) => {
+
+let opts = { 
+  'page': 2, // Number | The page of results to return.
+  'limit': 500 // Number | The amount of results to return. The maximum is 1000
+};
+apiInstance.getProviders(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -239,7 +254,11 @@ apiInstance.getProviders().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Number**| The page of results to return. | [optional] 
+ **limit** | **Number**| The amount of results to return. The maximum is 1000 | [optional] 
 
 ### Return type
 
@@ -264,7 +283,7 @@ Return all Services. Examples of Services are EC2 for AWS. This endpoint will re
 
 ### Example
 ```javascript
-import {Vantage} from '@vantage-sh/vantage-client';
+import {Vantage} from 'vantage';
 let defaultClient = Vantage.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: oauth2
@@ -274,7 +293,9 @@ oauth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new Vantage.PricesApi();
 
 let opts = { 
-  'providerId': "providerId_example" // String | Query services for a specific provider. e.g. aws
+  'providerId': "providerId_example", // String | Query services for a specific provider. e.g. aws
+  'page': 2, // Number | The page of results to return.
+  'limit': 500 // Number | The amount of results to return. The maximum is 1000
 };
 apiInstance.getServices(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -289,6 +310,8 @@ apiInstance.getServices(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **providerId** | **String**| Query services for a specific provider. e.g. aws | [optional] 
+ **page** | **Number**| The page of results to return. | [optional] 
+ **limit** | **Number**| The amount of results to return. The maximum is 1000 | [optional] 
 
 ### Return type
 
