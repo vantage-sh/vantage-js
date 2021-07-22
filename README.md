@@ -1,6 +1,34 @@
 [![Build Status](https://www.travis-ci.com/vantage-sh/vantage-js.svg?branch=main)](https://www.travis-ci.com/vantage-sh/vantage-js)
 
-# vantage
+# Vantage Javascript Client
+
+![Vantage Picture](https://uploads-ssl.webflow.com/5f9ba05ba40d6414f341df34/5f9bb1764b6670c6f7739564_moutain-scene.svg)
+
+[Vantage](http://vantage.sh/) is a cloud cost transparency platform. This is the official Ruby client for the [Vantage API](http://vantage.readme.io/). You can use the API to get EC2 instance price and product information through a few simple-to-use API calls. The data offered through this API is heavily inspired from data avaiable from [ec2instances.info](http://ec2instances.info/). The feedback we get from users is that this API is significantly easier than learning and using AWS Pricing APIs. We have plans to expand the data available through this API in the future.
+
+## Need Help?
+
+Feel free to join us in our [community Slack](https://join.slack.com/t/vantagecommunity/shared_invite/zt-oey52myv-gq4AWRKkX25kjp1UGziPTw) in the #api channel. We're happy to chat and help. You're also welcome to email support@vantage.sh or ping [@JoinVantage](https://twitter.com/joinvantage) on Twitter and we're happy to give assistance. Lastly, we monitor issues on this repo if you have any feature requests or issues. 
+
+## Installation
+
+The easiest way to get going is to install the client through RubyGems:
+
+```shell
+gem install vantage-client
+```
+
+## Generate a Free API Token
+The Vantage API is provided completely for free but requires an API token to use. To generate a free API token, follow these steps:
+
+* Head to [http://vantage.sh/](http://vantage.sh/)
+* Register a free account and confirm your email
+* When you're asked _"What would you like to do first?"_ click _"Access Cloud Pricing API"_
+* Create an API token from the account profile page and you're all set
+
+You'll only need to do this once and you can use your API token for all usage going forward. 
+
+## Client
 
 Vantage - JavaScript client for vantage
 Vantage API
