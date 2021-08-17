@@ -15,37 +15,37 @@
  */
 
 import {ApiClient} from '../ApiClient';
-import {Product} from './Product';
+import {Report} from './Report';
 
 /**
- * The Products model module.
- * @module Vantage/model/Products
+ * The Reports model module.
+ * @module Vantage/model/Reports
  * @version 1.0.0
  */
-export class Products {
+export class Reports {
   /**
-   * Constructs a new <code>Products</code>.
-   * Products model
-   * @alias module:Vantage/model/Products
+   * Constructs a new <code>Reports</code>.
+   * Reports model
+   * @alias module:Vantage/model/Reports
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>Products</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Reports</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:Vantage/model/Products} obj Optional instance to populate.
-   * @return {module:Vantage/model/Products} The populated <code>Products</code> instance.
+   * @param {module:Vantage/model/Reports} obj Optional instance to populate.
+   * @return {module:Vantage/model/Reports} The populated <code>Reports</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new Products();
+      obj = obj || new Reports();
       if (data.hasOwnProperty('links'))
         obj.links = ApiClient.convertToType(data['links'], Object);
-      if (data.hasOwnProperty('products'))
-        obj.products = ApiClient.convertToType(data['products'], [Product]);
+      if (data.hasOwnProperty('reports'))
+        obj.reports = ApiClient.convertToType(data['reports'], [Report]);
     }
     return obj;
   }
@@ -54,11 +54,11 @@ export class Products {
 /**
  * @member {Object} links
  */
-Products.prototype.links = undefined;
+Reports.prototype.links = undefined;
 
 /**
- * @member {Array.<module:Vantage/model/Product>} products
+ * @member {Array.<module:Vantage/model/Report>} reports
  */
-Products.prototype.products = undefined;
+Reports.prototype.reports = undefined;
 
 

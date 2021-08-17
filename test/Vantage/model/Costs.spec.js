@@ -31,14 +31,14 @@
   var instance;
 
   describe('Vantage', function() {
-    describe('Prices', function() {
+    describe('Costs', function() {
       beforeEach(function() {
-        instance = new Vantage.Prices();
+        instance = new Vantage.Costs();
       });
 
-      it('should create an instance of Prices', function() {
-        // TODO: update the code to test Prices
-        expect(instance).to.be.a(Vantage.Prices);
+      it('should create an instance of Costs', function() {
+        // TODO: update the code to test Costs
+        expect(instance).to.be.a(Vantage.Costs);
       });
 
       it('should have the property links (base name: "links")', function() {
@@ -47,10 +47,22 @@
         // expect(instance.links).to.be(expectedValueLiteral);
       });
 
-      it('should have the property prices (base name: "prices")', function() {
-        // TODO: update the code to test the property prices
-        expect(instance).to.have.property('prices');
-        // expect(instance.prices).to.be(expectedValueLiteral);
+      it('should have the property total (base name: "total")', function() {
+        // TODO: update the code to test the property total
+        expect(instance).to.have.property('total');
+        // expect(instance.total).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property currency (base name: "currency")', function() {
+        // TODO: update the code to test the property currency
+        expect(instance).to.have.property('currency');
+        // expect(instance.currency).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property costs (base name: "costs")', function() {
+        // TODO: update the code to test the property costs
+        expect(instance).to.have.property('costs');
+        // expect(instance.costs).to.be(expectedValueLiteral);
       });
 
     });

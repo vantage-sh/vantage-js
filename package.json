@@ -1,13 +1,13 @@
 {
   "name": "@vantage-sh/vantage-client",
-  "version": "0.0.1-beta7",
+  "version": "0.1.0",
   "description": "Vantage API Client",
   "license": "MIT",
-  "main": "dist/Vantage/index.js",
+  "main": "lib/Vantage/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
     "build": "babel ./src --out-dir lib",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "browser": {
     "fs": false

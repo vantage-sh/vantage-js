@@ -30,31 +30,29 @@
 
   var instance;
 
-  beforeEach(function() {
-    instance = new Vantage.PingApi();
-  });
-
   describe('Vantage', function() {
-    describe('PingApi', function() {
-      describe('ping', function() {
-        it('should call ping successfully', function(done) {
-          // TODO: uncomment ping call and complete the assertions
-          /*
-
-          instance.ping().then(function(data) {
-            // TODO: update response assertions
-            expect(data).to.be.a(Object);
-            // expect(data).to.be(null);
-
-            done();
-          }, function(error) {
-            done(error);
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
+    describe('Reports', function() {
+      beforeEach(function() {
+        instance = new Vantage.Reports();
       });
+
+      it('should create an instance of Reports', function() {
+        // TODO: update the code to test Reports
+        expect(instance).to.be.a(Vantage.Reports);
+      });
+
+      it('should have the property links (base name: "links")', function() {
+        // TODO: update the code to test the property links
+        expect(instance).to.have.property('links');
+        // expect(instance.links).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property reports (base name: "reports")', function() {
+        // TODO: update the code to test the property reports
+        expect(instance).to.have.property('reports');
+        // expect(instance.reports).to.be(expectedValueLiteral);
+      });
+
     });
   });
 
