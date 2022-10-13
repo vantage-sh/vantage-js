@@ -4,7 +4,7 @@
 
 ![Vantage Picture](https://uploads-ssl.webflow.com/5f9ba05ba40d6414f341df34/5f9bb1764b6670c6f7739564_moutain-scene.svg)
 
-[Vantage](http://vantage.sh/) is a cloud cost transparency platform. This is the official Ruby client for the [Vantage API](http://vantage.readme.io/). You can use the API to get EC2 instance price and product information through a few simple-to-use API calls. The data offered through this API is heavily inspired from data avaiable from [ec2instances.info](http://ec2instances.info/). The feedback we get from users is that this API is significantly easier than learning and using AWS Pricing APIs. We have plans to expand the data available through this API in the future.
+[Vantage](http://vantage.sh/) is a cloud cost transparency platform. This is the official Javascript client for the [Vantage API](http://vantage.readme.io/). You can use the API to get EC2 instance price and product information through a few simple-to-use API calls. The data offered through this API is heavily inspired from data avaiable from [ec2instances.info](http://ec2instances.info/). The feedback we get from users is that this API is significantly easier than learning and using AWS Pricing APIs. We have plans to expand the data available through this API in the future.
 
 ## Need Help?
 
@@ -12,7 +12,7 @@ Feel free to join us in our [community Slack](https://join.slack.com/t/vantageco
 
 ## Installation
 
-The easiest way to get going is to install the client through RubyGems:
+The easiest way to get going is to install the client through NPM:
 
 ```shell
 npm i @vantage-sh/vantage-client --save
